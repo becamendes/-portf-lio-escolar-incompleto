@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matemática</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .menu-interno {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background-color: #1e3d59;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .menu-interno a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background-color: #3e5f7d;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .menu-interno a:hover {
+      background-color: #ffffff;
+      color: #1e3d59;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📐 Matemática</h1>
+  </header>
+
+  <nav class="menu-interno">
+    <a href="#provas">Provas</a>
+    <a href="#relatorios">Relatórios</a>
+    <a href="#atividades">Atividades</a>
+    <a href="index.html">← Voltar</a>
+  </nav>
+
+  <div class="container">
+    <section id="provas" class="card">
+      <h2>Provas</h2>
+      <div class="task" onclick="toggleDesc(this)">Conteúdo 01 - Nota: 9.0</div>
+      <div class="description">Equações do 1º grau e resolução de problemas.</div>
+
+      <div class="task" onclick="toggleDesc(this)">Conteúdo 02 - Nota: 7.5</div>
+      <div class="description">Funções, gráficos e análise de dados.</div>
+    </section>
+
+    <section id="relatorios" class="card">
+      <h2>Relatórios</h2>
+      <div class="task" onclick="toggleDesc(this)">Tema 01</div>
+      <div class="description">Relatório sobre aplicação da matemática no cotidiano.</div>
+    </section>
+
+    <section id="atividades" class="card">
+      <h2>Atividades</h2>
+      <div class="task" onclick="toggleDesc(this)">Atividade de lógica</div>
+      <div class="description">Exercícios de raciocínio lógico com desafios.</div>
+    </section>
+  </div>
+
+  <script>
+    function toggleDesc(el) {
+      const desc = el.nextElementSibling;
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

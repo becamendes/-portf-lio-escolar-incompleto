@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biologia</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .menu-interno {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background-color: #1e3d59;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .menu-interno a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background-color: #3e5f7d;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .menu-interno a:hover {
+      background-color: #ffffff;
+      color: #1e3d59;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Biologia</h1>
+  </header>
+
+  <!-- Menu interno de navegação -->
+  <nav class="menu-interno">
+    <a href="#provas">Provas</a>
+    <a href="#relatorios">Relatórios</a>
+    <a href="#atividades">Atividades</a>
+    <a href="index.html">← Voltar</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="provas" class="card">
+      <h2>Provas</h2>
+      <div class="task" onclick="toggleDesc(this)">Conteúdo 01 - Nota: 8.8</div>
+      <div class="description">Estudamos ecossistemas e cadeias alimentares.</div>
+
+      <div class="task" onclick="toggleDesc(this)">Conteúdo 02 - Nota: 9.2</div>
+      <div class="description">Avaliação sobre genética e hereditariedade.</div>
+
+      <div class="task" onclick="toggleDesc(this)">Conteúdo 03 - Nota: 7.3</div>
+      <div class="description">Tema: Citologia e funcionamento celular.</div>
+    </section>
+
+    <section id="relatorios" class="card">
+      <h2>Relatórios</h2>
+      <div class="task" onclick="toggleDesc(this)">Tema 01</div>
+      <div class="description">Relatório sobre dissecação de anfíbios.</div>
+
+      <div class="task" onclick="toggleDesc(this)">Tema 02</div>
+      <div class="description">Pesquisa de campo em bioma cerrado.</div>
+
+      <div class="task" onclick="toggleDesc(this)">Tema 03</div>
+      <div class="description">Experimentos de fotossíntese em laboratório.</div>
+    </section>
+
+    <section id="atividades" class="card">
+      <h2>Atividades</h2>
+      <div class="task" onclick="toggleDesc(this)">Atividade prática</div>
+      <div class="description">Montagem de células com material reciclável.</div>
+
+      <div class="task" onclick="toggleDesc(this)">Debate teórico</div>
+      <div class="description">Discussão sobre bioética e clonagem.</div>
+    </section>
+
+  </div>
+
+  <script>
+    function toggleDesc(el) {
+      const desc = el.nextElementSibling;
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
